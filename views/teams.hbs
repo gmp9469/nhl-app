@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NHL Teams</title>
+</head>
+<body class="bg-gray-100">
+    <div class="flex flex-wrap justify-center">
+        <div class="w-full md:w-1/2 px-4">
+            <h1 class="text-center text-3xl font-bold mb-8">WEST</h1>
+            <div class="pacific mb-4">
+                <h3 class="text-lg font-bold mb-2">PACIFIC DIVISION TEAMS:</h3>
+                <ul>
+                    {{#each teams}}
+                        {{#equal this.conference "West"}}
+                          {{#equal this.division "Pacific"}}
+                            <li><a href="/teams/{{this.abrev}}" class="text-blue-600 hover:text-blue-800">{{this.Team}}</a></li>
+                          {{/equal}}
+                        {{/equal}}
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="central mb-4">
+                <h3 class="text-lg font-bold mb-2">CENTRAL DIVISION TEAMS:</h3>
+                <ul>
+                    {{#each teams}}
+                        {{#equal this.conference "West"}}
+                          {{#equal this.division "Central"}}
+                            <li><a href="/teams/{{this.abrev}}" class="text-blue-600 hover:text-blue-800">{{this.Team}}</a></li>
+                          {{/equal}}
+                        {{/equal}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="w-full md:w-1/2 px-4">
+            <h1 class="text-center text-3xl font-bold mb-8">EAST</h1>
+            <div class="metro mb-4">
+                <h3 class="text-lg font-bold mb-2">METRO DIVISION TEAMS:</h3>
+                <ul>
+                    {{#each teams}}
+                        {{#equal this.conference "East"}}
+                          {{#equal this.division "Metropolitan"}}
+                            <li><a href="/teams/{{this.abrev}}" class="text-blue-600 hover:text-blue-800">{{this.Team}}</a></li>
+                          {{/equal}}
+                        {{/equal}}
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="atlantic mb-4">
+                <h3 class="text-lg font-bold mb-2">ATLANTIC DIVISION TEAMS:</h3>
+                <ul>
+                    {{#each teams}}
+                        {{#equal this.conference "East"}}
+                          {{#equal this.division "Atlantic"}}
+                            <li><a href="/teams/{{this.abrev}}" class="text-blue-600 hover:text-blue-800">{{this.Team}}</a></li>
+                          {{/equal}}
+                        {{/equal}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mt-8 text-center">
+        <a href="/roster" class="text-lg font-bold text-blue-600 hover:text-blue-800">Roster Builder</a>
+    </div>
+</body>
+</html>

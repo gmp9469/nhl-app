@@ -1,0 +1,44 @@
+{
+  "name": "final-project-gmp9469",
+  "version": "1.0.0",
+  "description": "Ice Hockey stats aren't just about who has the most goals or points. There are many player metrics that evaluate how efficient they are, how well they are being utilized in different sitautions, or even what sort of habits they have with the puck.",
+  "main": "postcss.config.js",
+  "scripts": {
+    "test": "mocha --require esm --recursive '**/*.test.mjs'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyu-csci-ua-0467-001-002-spring-2023/final-project-gmp9469.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nyu-csci-ua-0467-001-002-spring-2023/final-project-gmp9469/issues"
+  },
+  "homepage": "https://github.com/nyu-csci-ua-0467-001-002-spring-2023/final-project-gmp9469#readme",
+  "dependencies": {
+    "all": "^0.0.0",
+    "canvas": "^2.11.0",
+    "canvas-constructor": "^7.0.0",
+    "canvas-sketch": "^0.7.7",
+    "chai": "^4.3.7",
+    "csv-parser": "^3.0.0",
+    "expect": "^29.5.0",
+    "express": "^4.18.2",
+    "fontconfig": "^0.5.0",
+    "handlebars-helper-equal": "^1.0.0",
+    "hbs": "^4.2.0",
+    "jimp": "^0.3.5",
+    "mongoose": "^7.0.3",
+    "pure-canvas": "^0.7.0",
+    "pureimage": "^0.3.17",
+    "skia-canvas": "^1.0.1",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "esm": "^3.2.25",
+    "jest": "^29.5.0",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  }
+}

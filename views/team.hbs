@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ team.Team }}</title>
+</head>
+<body class="bg-gray-100">
+	<div class="flex justify-between items-center px-8 py-4 bg-white shadow">
+		<div class="flex flex-col">
+			<h1 class="text-5xl font-bold mb-2">{{ team.Team }}</h1>
+			<p class="text-lg font-bold">Record: {{ team.W }}W- {{ team.L }}L- {{ team.OTL }}OTL</p>
+			<p class="text-lg font-bold">GP: {{ team.GP }}</p>
+		</div>
+        <div class="flex flex-col">
+            <p class="ml-40 text-lg font-bold">5v5 ranks &#40;percentile&#41; </p>
+		    <img class="w-100rem h-auto" src="{{imageString}}">
+        </div>
+	</div>
+	<div class="max-w-4xl mx-auto px-8 py-6">
+		<div class="mt-8">
+			<h2 class="text-2xl font-bold mb-4">Roster</h2>
+			<table class="w-full table-auto">
+				<thead>
+					<tr class="bg-gray-200 text-left">
+						<th class="px-4 py-2">Name</th>
+						<th class="px-4 py-2">GP</th>
+						<th class="px-4 py-2">Goals</th>
+						<th class="px-4 py-2">Assists</th>
+						<th class="px-4 py-2">Points</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each team.players}}
+					<tr class="bg-white border-b">
+						<td class="px-4 py-2"><a href="/players/{{this.Player}}">{{this.Player}}</a></td>
+						<td class="px-4 py-2">{{this.GP}}</td>
+						<td class="px-4 py-2">{{this.Goals}}</td>
+						<td class="px-4 py-2">{{this.Assists}}</td>
+						<td class="px-4 py-2">{{this.Points}}</td>
+					</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

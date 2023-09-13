@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="bg-gray-100">
+  <head>
+    <title class="text-center text-2xl font-bold">{{player.Player}} - Player Stats</title>
+  </head>
+  <body class="max-w-screen-lg mx-auto py-8">
+    <div class="flex justify-between items-center px-8 py-4 bg-white shadow">
+      <div class="flex flex-col">
+        <h1 class="text-left text-3xl font-bold">{{player.Player}} - Player Stats</h1>
+      </div>
+      <div class="flex flex-col">
+        <p class="ml-40 text-lg font-bold">5v5 ranks &#40;percentile&#41; </p>
+        <img class="w-50rem h-50rem" src="{{imageString}}">
+      </div>
+    </div>
+    <table class="mt-8 table-auto table-collapse">
+      <thead class="text-left">
+        <tr>
+          <th class="px-4 py-2 font-bold pr-8">Stat</th>
+          <th class="px-4 py-2 font-bold">Value</th>
+        </tr>
+      </thead>
+      <tbody class="text-left">
+        <tr>
+          <td class="px-4 py-2">Team</td>
+          <td class="px-4 py-2">{{player.Team}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">Position</td>
+          <td class="px-4 py-2">{{player.Position}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">Games Played</td>
+          <td class="px-4 py-2">{{player.GP}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">Time on Ice</td>
+          <td class="px-4 py-2">{{player.TOI}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">Goals</td>
+          <td class="px-4 py-2">{{player.Goals}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">Assists</td>
+          <td class="px-4 py-2">{{player.Assists}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">Points</td>
+          <td class="px-4 py-2">{{player.Points}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">IPP</td>
+          <td class="px-4 py-2">{{player.IPP}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">Shots</td>
+          <td class="px-4 py-2">{{player.Shots}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">SH%</td>
+          <td class="px-4 py-2">{{player.SH}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">ixG</td>
+          <td class="px-4 py-2">{{player.ixG}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">iCF</td>
+          <td class="px-4 py-2">{{player.iCF}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">iFF</td>
+          <td class="px-4 py-2">{{player.iFF}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">iSCF</td>
+          <td class="px-4 py-2">{{player.iSCF}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">iHDCF</td>
+          <td class="px-4 py-2">{{player.iHDCF}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">Rush Attempts</td>
+          <td class="px-4 py-2">{{player.Rush}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">Rebounds Created</td>
+          <td class="px-4 py-2">{{player.Rebounds}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">PIM</td>
+          <td class="px-4 py-2">{{player.PIM}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">Minor</td>
+          <td class="px-4 py-2">{{player.Minor}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">Major</td>
+          <td class="px-4 py-2">{{player.Major}}</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2">Misconduct</td>
+          <td class="px-4 py-2">{{player.Misconduct}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

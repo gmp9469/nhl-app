@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Roster Builder</title>
+  </head>
+  <body class="py-6 px-4">
+    <h1 class="text-3xl font-bold mb-4">Roster Builder</h1>
+
+    <form action="/roster" method="POST" class="max-w-lg">
+      <div class="mb-4">
+        <label for="name" class="block font-bold mb-2">Team Name:</label>
+        <input type="text" name="name" id="name" required class="w-full p-2 rounded-md border border-gray-300" />
+      </div>
+
+      <div class="mb-4">
+        <label for="LW" class="block font-bold mb-2">LW:</label>
+        <select name="LW" id="LW" required class="w-full p-2 rounded-md border border-gray-300">
+          <option value="" selected></option>
+          {{#each players}}
+          {{#equal this.Position "L"}}
+          <option value="{{this.Player}}">{{this.Player}}</option>
+          {{/equal}}
+          {{/each}}
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <label for="C" class="block font-bold mb-2">C:</label>
+        <select name="C" id="C" required class="w-full p-2 rounded-md border border-gray-300">
+          <option value="" selected></option>
+          {{#each players}}
+          {{#equal this.Position "C"}}
+          <option value="{{this.Player}}">{{this.Player}}</option>
+          {{/equal}}
+          {{/each}}
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <label for="RW" class="block font-bold mb-2">RW:</label>
+        <select name="RW" id="RW" required class="w-full p-2 rounded-md border border-gray-300">
+          <option value="" selected></option>
+          {{#each players}}
+          {{#equal this.Position "R"}}
+          <option value="{{this.Player}}">{{this.Player}}</option>
+          {{/equal}}
+          {{/each}}
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <label for="LD" class="block font-bold mb-2">LD:</label>
+        <select name="LD" id="LD" required class="w-full p-2 rounded-md border border-gray-300">
+          <option value="" selected></option>
+          {{#each players}}
+          {{#equal this.Position "D"}}
+          <option value="{{this.Player}}">{{this.Player}}</option>
+          {{/equal}}
+          {{/each}}
+        </select>
+      </div>
+
+      <div class="mb-6">
+        <label for="RD" class="block font-bold mb-2">RD:</label>
+        <select name="RD" id="RD" required class="w-full p-2 rounded-md border border-gray-300">
+          <option value="" selected></option>
+          {{#each players}}
+          {{#equal this.Position "D"}}
+          <option value="{{this.Player}}">{{this.Player}}</option>
+          {{/equal}}
+          {{/each}}
+        </select>
+      </div>
+
+      <div class="text-center">
+        <input type="submit" value="Save Roster" class="max-w-md mx-auto px-6 py-3 bg-blue-600 text-white font-bold rounded-md cursor-pointer hover:bg-blue-700" />
+      </div>
+    </form>
+    <h2 class="text-2xl font-bold mt-10 mb-4">Current Rosters</h2>
+
+    {{#if rosters.length}}
+    <table class="w-full border-collapse">
+      <thead>
+        <tr>
+          <th class="border border-gray-300 px-4 py-2">Team Name</th>
+          <th class="border border-gray-300 px-4 py-2">LW</th>
+          <th class="border border-gray-300 px-4 py-2">C</th>
+          <th class="border border-gray-300 px-4 py-2">RW</th>
+          <th class="border border-gray-300 px-4 py-2">LD</th>
+          <th class="border border-gray-300 px-4 py-2">RD</th>
+          <th class="border border-gray-300 px-4 py-2"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each rosters}}
+        <tr>
+          <td class="border border-gray-300 px-4 py-2">{{this.name}}</td>
+          <td class="border border-gray-300 px-4 py-2">{{this.LW}}</td>
+          <td class="border border-gray-300 px-4 py-2">{{this.C}}</td>
+          <td class="border border-gray-300 px-4 py-2">{{this.RW}}</td>
+          <td class="border border-gray-300 px-4 py-2">{{this.LD}}</td>
+          <td class="border border-gray-300 px-4 py-2">{{this.RD}}</td>
+          <td class="border border-gray-300 px-4 py-2 text-center">
+            <form action="/roster/delete/{{this._id}}" method="GET">
+              <input type="hidden" name="id" value="{{this._id}}" />
+              <button type="submit" class="px-3 py-1 bg-red-600 text-white font-bold rounded-md cursor-pointer hover:bg-red-700">Delete</button>
+            </form>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    {{else}}
+    <p>No rosters found.</p>
+    {{/if}}
+  </body>
+</html>

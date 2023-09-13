@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The ScoreSheet</title>
+    <h1 class="text-7xl font-bold mb-2 border-b-2 border-gray-700 text-gray-700">The ScoreSheet</h1>
+    <link rel="stylesheet" type="text/css" href="dist/tailwind.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body>
+    {{{body}}}
+  </body>
+  <br>
+  <br>
+<div class="flex items-center justify-between px-10 py-4 bg-blue-500">
+  <a href="/" class="text-white font-bold">Home</a>
+  <div class="flex items-center">
+    <form class="bg-white p-10 rounded-lg shadow-lg mr-5" action="/search" method="GET">
+      <div class="mb-5">
+        <label for="search" class="font-bold mb-1 block">Search for a team or player:</label>
+        <input type="text" name="search" id="search" class="border rounded-lg py-2 px-3 w-full focus:outline-none focus:ring focus:border-blue-300" placeholder="Enter a team or player name">
+      </div>
+      <div class="flex justify-left">
+        <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors duration-300">Search</button>
+      </div>
+    </form>
+  </div>
+  <div>
+    <form class="bg-white p-10 rounded-lg shadow-lg mr-5" method="get" action="/random">
+      <button type="submit" name="rand" value="player" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-l">
+        View Random Player
+      </button>
+      <button type="submit" name="rand" value="team" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-r">
+        View Random Team
+      </button>
+    </form>
+  </div>
+</div>
+<p class="flex items-center justify-between px-10 py-4 bg-blue-500">Data taken from Natural Stat Trick</p>
+</html>

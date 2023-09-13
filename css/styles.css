@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Set margin and padding to 0 for the entire page */
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set font family, font size and line height */
+  body {
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Set background color and padding for the entire page */
+  body {
+    background-color: #F7FAFC;
+    padding: 20px;
+  }
+  
+  /* Set max width for the team container */
+  .team-container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Set width for the West conference */
+  .west {
+    width: 45%;
+  }
+  
+  /* Set padding for the West conference */
+  .west > div {
+    padding-right: 20px;
+  }
+  
+  /* Set width for the East conference */
+  .east {
+    width: 45%;
+  }
+  
+  /* Set padding for the East conference */
+  .east > div {
+    padding-left: 20px;
+  }
+  
+  /* Set font weight and color for headings */
+  h1, h2, h3 {
+    font-weight: bold;
+    color: #2D3748;
+  }
+  
+  /* Set font size and margin for h1 */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Set font size and margin for h2 */
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Set font size and margin for h3 */
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Set font weight, color and padding for list items */
+  li {
+    font-weight: bold;
+    color: #4A5568;
+    padding: 5px 0;
+  }
+  
+  /* Set color and hover color for links */
+  a {
+    color: #3182CE;
+  }
+  
+  a:hover {
+    color: #2C5282;
+  }
+  
